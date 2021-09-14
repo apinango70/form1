@@ -1,0 +1,24 @@
+<title>Home</title>
+<h1>Pages#index</h1>
+<p>Find me in app/views/pages/index.html.erb</p>
+
+<div class="container">
+  <%= params %>
+
+
+<form class="container" method="get" action="/pages/create">
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="age">Edad</label>
+    <input name="age" type="number" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="comment">Comentario</label>
+    <textarea name="comment" class="form-control"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

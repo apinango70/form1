@@ -1,0 +1,113 @@
+<title>Dashboard 2</title>
+<h1>Pages#dashboard2</h1>
+<p>Find me in app/views/pages/dashboard2.html.erb</p>
+
+
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+</head>
+<body>
+    <div class="container">
+    	<div class="title">
+    		<h3>Table #1</h3>
+    	</div>
+    	<div class="row">
+            <div class="col-md-12">
+                <h4>Registered users </h4>
+            </div>
+            <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+            <h4><small></small></h4>
+                <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Comment</th>
+                            <th class="text-right">Actions</th>
+                        </tr>
+                    </thead>
+                      <% @user.each do |user| %>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><%= user.id %></td>
+                            <td><%= user.email %></td>
+                            <td><%= user.age %></td>
+                            <td><%= user.comment %></td>
+
+                            <td class="td-actions text-right">
+                                <div id="botones">
+                                <button type="button"  class="btn btn-info btn-just-icon btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="material-icons">person</i>
+                                </button>
+
+
+
+
+                                <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm" data-original-title="" title="">
+                                    <i class="material-icons">edit</i>
+                                </button>
+                                <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm" data-original-title="" title="">
+                                    <i class="material-icons">close</i>
+                                </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                      <% end %>
+                </table>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<!-- MEnsaje Modal del registro-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Datos del registro</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+  <% @user.each do |user| %>
+  <%= user.id %>
+  <%= user.email %>
+  <%= user.age %>
+  <%= user.comment %>
+  <% end %>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+    <footer class="footer text-center ">
+        <p>Práctica de Ruby on Rails</p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+
+
+    <script type="text/javascript" src="script.js">    </script>
+</body>

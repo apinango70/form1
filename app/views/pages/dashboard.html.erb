@@ -1,0 +1,135 @@
+    <title>Formulario</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100 ver1 m-b-110">
+        <div class="table100-head">
+          <table>
+
+            <thead>
+              <tr class="row100 head">
+                <th class="cell100 column1">id</th>
+                <th class="cell100 column2">Email</th>
+                <th class="cell100 column3">Age</th>
+                <th class="cell100 column4">Comment</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="table100-body js-pscroll">
+          <table>
+              <% @user.each do |user| %>
+            <tbody>
+              <tr class="row100 body">
+                <td class="cell100 column1"><%= user.id %></td>
+                <td class="cell100 column2"><%= user.email %></td>
+                <td class="cell100 column3"><%= user.age %></td>
+                <td class="cell100 column4"><%= user.comment %></td>
+              </tr>
+            </tbody>
+            <% end %>
+          </table>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <title>Formulario 2</title>
+   <head>
+
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+      <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    </head>
+   <body>
+      <div class="container">
+        <div class="title">
+          <h3>Usuarios registrados</h3>
+        </div>
+        <div class="row">
+
+              <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+              <h4><small> </small></h4>
+                  <div class="table-responsive">
+                  <table class="table">
+
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th>Email</th>
+                              <th>Edad</th>
+                              <th>Comentario</th>
+
+                              <th class="text-right">Acciones</th>
+                          </tr>
+                      </thead>
+                 </table>
+                  <table>
+                    <% @user.each do |user| %>
+                      <tbody>
+
+                          <tr>
+                              <td><%= user.id %></td>
+                              <td><%= user.email %></td>
+                              <td><%= user.age %></td>
+                              <td><%= user.comment %></td>
+                              <td class="td-actions text-right" fluid>
+                                  <button type="button" rel="tooltip" class="btn btn-info btn-just-icon btn-sm" data-original-title="" title="">
+                                      <i class="material-icons">person</i>
+                                  </button>
+                                  <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm" data-original-title="" title="">
+                                      <i class="material-icons">edit</i>
+                                  </button>
+                                  <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm" data-original-title="" title="">
+                                      <i class="material-icons">close</i>
+                                  </button>
+                              </td>
+                          </tr>
+                      </tbody>
+                                  <% end %>
+                  </table>
+                  </div>
+          </div>
+      </div>
+
+      <footer class="footer text-center ">
+          <p>Prueba con Ruby on Rails</p>
+      </footer>
+
+      <script type="text/javascript" src="script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+   </body>

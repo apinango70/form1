@@ -1,0 +1,16 @@
+<title>Create user</title>
+<h1>Pages#create</h1>
+<p>Find me in app/views/pages/create.html.erb</p>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> encontrado, no se creó ningún registro</h2>
+     
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li> <% end %>
+    </ul>
+  </div>
+<% else %>
+  <h1> Te registraste con éxito </h1>
+<% end %>
